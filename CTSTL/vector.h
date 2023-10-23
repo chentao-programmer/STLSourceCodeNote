@@ -8,5 +8,6 @@
 #include <initializer_list>
 
 #include "iterator.h"
+#include "memory.h"
 
 #endif
