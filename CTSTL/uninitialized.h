@@ -46,7 +46,7 @@ unchecked_uninit_copy(InputIter first, InputIter last, ForwardIter result, std::
 }
 
 template <class InputIter, class ForwardIter>
-ForwardIter uninitalized_copy(InputIter first, InputIter last, ForwardIter result)
+ForwardIter uninitialized_copy(InputIter first, InputIter last, ForwardIter result)
 {
     return ctstl::unchecked_uninit_copy(first, last, result,
                                         std::is_trivially_copy_assignable<
@@ -91,7 +91,7 @@ template <class InputIter, class Size, class ForwardIter>
 ForwardIter
 uninitialized_copy_n(InputIter first, Size n, ForwardIter result)
 {
-    return ctstl::uninitalized_copy_n(first, n, result, 
+    return ctstl::uninitialized_copy_n(first, n, result, 
                                std::is_trivially_copy_assignable<
                                typename iterator_traits<InputIter>::
                                value_type>{});
